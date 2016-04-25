@@ -1,0 +1,14 @@
+{% extends "templates/base.html" %}
+
+            {% load custom_markdown %}
+            
+            {% block content %}
+            <div class="col-sm-12 blog-main">
+                <div class="post col-md-12">
+                    <h1>{{ object.title }}</h1>
+                    <h3>{{ object.pub_date }}</h3>
+                    {{ object.text|custom_markdown }}
+                </div>
+            </div>
+            {% endblock %}
+            {% block sidebar %}{% endblock %}
